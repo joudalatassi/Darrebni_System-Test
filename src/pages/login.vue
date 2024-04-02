@@ -147,6 +147,7 @@ const onSubmit = () => {
                   label="البريد الإلكتروني"
                   type="email"
                   :rules="[requiredValidator, emailValidator]"
+                  placeholder="login with this email --> runolfsdottir.vanessa@example.net"
                 />
               </VCol>
 
@@ -159,6 +160,7 @@ const onSubmit = () => {
                   :append-inner-icon="isPasswordVisible ? 'tabler-eye-off' : 'tabler-eye'"
                   :rules="[requiredValidator]"
                   @click:append-inner="isPasswordVisible = !isPasswordVisible"
+                  placeholder="and this password --> 123456789"
                 />
 
                 <div class="d-flex align-center flex-wrap justify-space-between mt-2 mb-4">

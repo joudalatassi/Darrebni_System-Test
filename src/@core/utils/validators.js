@@ -16,7 +16,7 @@ export const emailValidator = value => {
   if (Array.isArray(value))
     return value.every(val => re.test(String(val))) || 'The Email field must be a valid email'
   
-  return re.test(String(value)) || 'The Email field must be a valid email'
+  return re.test(String(value)) || 'The Email field must be a valid email , copy this email to login --> runolfsdottir.vanessa@example.net'
 }
 
 // 👉 Password Validator
@@ -29,6 +29,7 @@ export const passwordValidator = password => {
     validPassword ||
         'Field must contain at least one uppercase, lowercase, special character and digit with min 8 chars')
 }
+
 
 // 👉 Confirm Password Validator
 export const confirmedValidator = (value, target) => value === target || 'The Confirm Password field confirmation does not match'
